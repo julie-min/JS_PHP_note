@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>제어문</title>
+</head>
+<body>
+<script>
+
+/*
+  제어문 : 조건문 + 반복문
+
+
+  1. if문
+  조건식이 참인지 거짓인지에 따라 코드의 실행을 제어한다.
+  1) if 구문 : 참인것만
+  2) if ~ else 구문 : 참, 거짓에 따라서
+  3) if ~ else if ~ else 구문 : 조건이 3가지 이상일때
+
+
+*/
+
+let score = 80;
+if (score>=70) {
+    result = "합격";
+} else {
+    result = "불합격";
+}
+alert(result);
+
+for (let i = 0; i < 3; i++) {
+    document.write("안녕<br>");
+}
+
+let sum = 0;
+for (let i = 0; i <= 10; i++) {
+    sum += i;
+}
+document.write("<br>"+sum+"<br>");
+
+const color = ["red", "green", "blue", "pink"];
+let text = "";
+for (let i = 0; i <=3; i++) {
+    text += `<span style='color:${color[i]}'>안녕</span><br>`;
+}
+document.write(text);
+
+// 3의 배수를 출력
+for (let i = 1; i <= 10; i++) {
+    if( i % 3 == 0) {
+        console.log(i);
+    }
+}
+
+// for in 문
+const member = {id:"apple", name:"홍길동", age:"30"};
+for (let memberKey in member) {
+    document.write(member[memberKey]+"<br>");
+}
+
+// for of 문
+const scores = [88,75,95,78,90];
+for (let score of scores) {
+    document.write(score+"<br>");
+}
+
+//----
+
+const myObject = {
+    name: 'Julie',
+    age: 30,
+    job: 'Developer'
+};
+
+for (let object in myObject) {
+    console.log(myObject[object]);
+}
+
+const keys = Object.keys(myObject);
+for (const key in keys) {
+    console.log(keys[key]);
+}
+
+
+
+</script>
+</body>
+</html>
