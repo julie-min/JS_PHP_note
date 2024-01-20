@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>익명함수</title>
+</head>
+<body>
+<button onclick="incCounter()">+</button>
+<p id="show">0</p>
+<script>
+  // 익명함수: 함수 이름이 없는 함수.
+  const mul = function(a,b) {
+    return a*b
+  };
+
+  let x = mul(5,8);
+  console.log(x);
+
+  // 자기호출 익명함수: 함수 정의와 호출이 동시에 일어나 바로 실행되는 함수
+  // 먼저 익명함수
+  // (function() {
+  //     return a+b;
+  // })();
+
+  (function() {
+      console.log("익명함수");
+  }) ();
+  // 자기호출 익명함수다.
+
+
+  // --------------------------------
+
+
+const increase =  (function() {
+    let counter = 0;
+    return function() {
+        counter += 1;
+        return counter;
+    }
+}) ();
+
+function incCounter() {
+    document.getElementById("show").innerHTML = increase();
+}
+
+
+</script>
+</body>
+</html>

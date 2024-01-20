@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>함수</title>
+</head>
+<body>
+<p id="show"></p>
+<script>
+  function circleArea(r) {
+    let result = r*r*3.14;
+    return result;
+  }
+
+  let radius = 8;
+  let area;
+  area = circleArea(radius);
+  document.getElementById("show").innerHTML = "원의넓이: " + area;
+
+
+
+
+</script>
+</body>
+</html>

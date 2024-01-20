@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+
+// 데이터형은 총 8가지
+// 숫자
+// 문자
+// 불
+// Null
+// Undefined
+// Biginit
+// object
+// symbol
+
+let text1 = "apple";
+let text2 = "Hi everyone";
+
+document.write(text1.length+"<br>");
+document.writeln(text2.length);
+document.write("HI");
+document.write("안녕하세요.\n반갑습니다.");
+
+let text3 = "안녕하세요.\n반갑습니다.";
+alert(text3);
+
+
+const car = ["현대","기아","벤츠","BMW"];
+document.write(car[0]+"<br>");
+document.write(car[3]+"<br>");
+document.write(car[1]+"<br>");
+document.write(car[2]+"<br>");
+
+const member = {name:"홍지윤", age:20}
+let id = Symbol('id');
+member[id] = 'jmember';
+
+// 심볼은 유일한 식별자로서, 객체의 속성을 추가하는데 사용된다.
+document.write(member[id]+"<br>");
+document.write(typeof id +"<br>"); // id의 타입은 심볼이다.
+document.write(id === Symbol('id'));
+
+
+</script>
+</body>
+</html>

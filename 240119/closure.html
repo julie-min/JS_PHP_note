@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>클로저</title>
+</head>
+<body>
+<button onclick="incCounter()">+</button>
+<p id="show">0</p>
+<script>
+
+  // 전역변수 사용
+  // let counter = 0;
+  // const incCounter = function () {
+  //   counter += 1;
+  //   document.getElementById("show").innerHTML = counter;
+  // }
+
+  // 지역변수 사용
+  // const incCounter = function () {
+  //   let counter2 = 0;
+  //   counter2 += 1;
+  //   document.getElementById("show").innerHTML = counter2;
+  // }
+
+// 함수가 호출되어도 지역변수 값을 계속해서 사용할수 있는 방법 = 클로저
+
+  const increase = (function () {
+    let counter = 0;
+    return function() {
+      counter += 1;
+      return counter;
+    }
+  })();
+
+  function incCounter() {
+    document.getElementById("show").innerHTML = increase();
+  }
+
+</script>
+</body>
+</html>
