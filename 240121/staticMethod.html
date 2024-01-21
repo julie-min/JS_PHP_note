@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>정적메소드</title>
+</head>
+<body>
+<p id="show">
+</p>
+
+<script>
+
+  // 정적 메소드
+  // 자바스크립트의 정적 메서드는 클래스 자체에서 정의됩니다.
+  // 정적메서드는 객체를 통해 호출되는 것이 아니라, 클래스에서 호출 됩니다.
+
+  class Member {
+    constructor(name, age) {
+      this.name = name;
+      this.age = age;
+    }
+    getName() {
+      return "나의 이름은 " + this.name + "입니다요.";
+    }
+    static getCountry() {
+      return "한국인입니다.";
+    }
+  }
+
+  const mem1 = new Member("홍길동",30);
+
+  let text = "";
+  text += mem1.getName()+"<br>";
+  text += Member.getCountry()+"<br>";
+  document.getElementById("show").innerHTML = text;
+
+
+</script>
+</body>
+</html>

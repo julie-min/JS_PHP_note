@@ -20,10 +20,27 @@
 
   const mem1 = new Member("user1","홍길동",30);
 
+  // let text = "";
+  // text += mem1.name + "<br>";
+  // text += mem1.company;
+  // document.getElementById("show").innerHTML = text;
+
+  // 생성자 함수 외부에서 프로퍼티를 추가하려면 프로토타입을 이용해야한다.
+
+  Member.prototype.company = "기아";
+  Member.prototype.getId = function() {
+      return "아이디는" + this.id + "입니다.";
+  }
   let text = "";
   text += mem1.name + "<br>";
-  text += mem1.company;
+  text += mem1.company + "<br>";
+  text += mem1.getId();
   document.getElementById("show").innerHTML = text;
+
+  // 프로토타입을 이용하면 생성자 함수에 의해 생성됨
+
+
+
 </script>
 </body>
 </html>
