@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>생성자</title>
+</head>
+<body>
+<p id="show"></p>
+
+<script>
+    // 생성자 함수 : new 연산자와 함께 "객체"를 생성하기 위해 사용됨
+
+    function Member(id, name, age) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+    }
+
+    const mem1 = new Member("id1","Julie",30);
+    const mem2 = new Member("id2","Tom",20);
+    const mem3 = new Member("id3","Kim",10);
+
+    let text = "";
+    text += mem1.name + "<br>";
+    text += mem2.name + "<br>";
+    text += mem3.name + "<br>";
+    document.getElementById("show").innerHTML = text;
+
+</script>
+</body>
+</html>
