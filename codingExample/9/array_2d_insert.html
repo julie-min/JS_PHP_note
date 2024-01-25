@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+</head>
+<body>
+<p id="show"></p>
+<script>
+    const arr = new Array(4);
+    for (var i=0; i<arr.length; i++) {
+        arr[i] = new Array(3);
+    }
+
+    let num = 1;
+    for (var i=0; i<4; i++) {
+        for (var j=0; j<3; j++) {
+            arr[i][j] = num;
+            num++;
+        }
+    }
+
+    let text = "";
+    for (var i=0; i<4; i++) {
+        for (var j=0; j<3; j++) {
+            text += arr[i][j] + " ";
+        }
+        text += "<br>";
+    }    
+    document.getElementById("show").innerHTML = text;
+</script>
+</body>
+</html>
