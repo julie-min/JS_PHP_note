@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+</head>
+<body>
+<p id="show"></p>
+
+<script>
+    const fruits = ["사과", "딸기", "참외"]; 
+    
+    let text = "<ul>";
+    for (let i=0; i<fruits.length; i++) {
+        text += "<li>" + fruits[i] + "</li>";
+    }
+    text += "</ul>";
+    document.getElementById("show").innerHTML = text;
+</script>
+</body>
+</html>
