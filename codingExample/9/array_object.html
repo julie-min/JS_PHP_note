@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+</head>
+<body>
+<p id="show"></p>
+
+<script>
+    const member1 = ["홍길동", "010-1234-5678", 30];    // 배열 
+    const member2 = {name: "홍길동", phone: "010-1234-5678", age: 30};    // 객체
+
+    let text = "";
+    text += typeof member1 + "<br>";
+    text += typeof member2 + "<br>";
+    text += member1[0] + "<br>";
+    text += member2.name;  // member2["name"]도 사용 가능
+    document.getElementById("show").innerHTML = text;
+</script>
+</body>
+</html>
