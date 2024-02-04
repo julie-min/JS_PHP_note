@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>프로토타입 복습</title>
+  <script>
+  function Member(id, name, age) {
+    this.id = id;
+    this.name = name;
+    this.age = age;
+  }; // 생성자 함수를 만들었음
+
+  const member1 = new Member("user", "홍길동", 30);
+  const member2 = new Member("admin", "아무개", 25);
+
+  member1.company = "Microsoft";
+  console.log(member1);
+  console.log(member2);
+  // 값을 넣으면 돼
+
+  Member.prototype.company = "Google";
+  console.log(member1);
+  console.log(member2);
+
+  const member3 = new Member("manager","김철수",14);
+  console.log(member3);
+
+</script>
+</head>
+<body>
+
+</body>
+</html>
