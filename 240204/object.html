@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>객체 복습</title>
+</head>
+<body>
+<script>
+  const member = {
+    id : "user",
+    name : "홍길동",
+    age : 30
+  };
+
+  member.new = 'new value';
+  delete member.new;
+  console.log(member.new);
+
+  let keys = Object.keys(member);
+  console.log(keys); // 배열 ['id', 'name', 'age']
+
+  let values = Object.values(member);
+  console.log(values); // 배열 ['user', '홍길동', 30]
+
+  let values_specific = member.id;
+  console.log(values_specific); // user
+
+  function findKeyByValue(obj, value) {
+    return Object.keys(obj).find(key => obj[key] === value);
+  }
+  const targetValue = "홍길동";
+  const targetKey = findKeyByValue(member, targetValue);
+  console.log(targetKey); // name
+
+</script>
+</body>
+</html>
