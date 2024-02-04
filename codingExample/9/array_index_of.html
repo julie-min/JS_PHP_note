@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+</head>
+<body>
+<p id="show"></p>
+<script>
+    const fruits = ["사과", "오렌지", "수박", "감", "수박", "딸기", "키위"];
+    let index1 = fruits.indexOf("수박");
+    let index2 = fruits.indexOf("수박", 3);
+    let index3 = fruits.indexOf("바나나");
+
+    let text = "";
+    text += index1 + "<br>";
+    text += index2 + "<br>";       
+    text += index3;   
+    document.getElementById("show").innerHTML = text;
+</script>
+</head>	
+<body>
+</body>  
+</html>
