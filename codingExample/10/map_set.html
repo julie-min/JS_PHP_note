@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+</head>
+<body>
+<p id="show"></p>
+<script>
+    const pets = new Map();
+    pets.set("강아지", 100);
+    pets.set("고양이", 200);
+    pets.set("앵무새", 300);
+
+    let text = "";
+    pets.forEach(function(value, key) {
+        text += key + " : " + value + "<br>";
+    })
+    document.getElementById("show").innerHTML = text;
+</script>
+</body>
+</html>
